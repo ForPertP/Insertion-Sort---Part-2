@@ -1,4 +1,4 @@
-void printArray(const vector<int>& arr) {
+void show_value(const vector<int>& arr) {
     for (int num : arr) {
         cout << num << " ";
     }
@@ -16,7 +16,7 @@ void insertionSort2(int n, vector<int>& arr) {
         }
         arr[j + 1] = key;
 
-        printArray(arr);
+        show_value(arr);
     }
 }
 
