@@ -11,3 +11,40 @@ using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
 using System.Text;
 using System;
+
+
+
+
+class Result
+{
+
+    /*
+     * Complete the 'insertionSort2' function below.
+     *
+     * The function accepts following parameters:
+     *  1. INTEGER n
+     *  2. INTEGER_ARRAY arr
+     */
+
+    static void ShowValue(List<int> arr)
+    {
+        foreach (int num in arr) Console.Write(num + " ");
+        Console.WriteLine();
+    }
+
+    public static void insertionSort2(int n, List<int> arr)
+    {
+        for (int i = 1; i < n; ++i)
+        {
+            int key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key)
+            {
+                arr[j + 1] = arr[j];
+                --j;
+            }
+            arr[j + 1] = key;
+            ShowValue(arr);
+        }
+    }    
+}
